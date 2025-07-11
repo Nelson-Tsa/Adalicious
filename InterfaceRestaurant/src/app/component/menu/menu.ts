@@ -1,41 +1,34 @@
-import { Component, inject, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { Client } from '../client/client';
-import { PlateService } from '../../services/plate.service';
-import { Plate } from '../../models/plate.model';
 import { CommonModule } from '@angular/common';
-import { Menu } from '../../component/menu/menu';
+import { Component, inject, OnInit } from '@angular/core';
+import { PlateService } from '../../services/plate.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Plate } from '../../models/plate.model';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-  selector: 'app-command',
-  imports: [ CommonModule, Menu, MatButtonModule],
-  templateUrl: './command.html',
-  styleUrl: './command.css'
+  selector: 'app-menu',
+  imports: [CommonModule, MatButtonModule, MatIconModule],
+  templateUrl: './menu.html',
+  styleUrl: './menu.css'
 })
-export class Command implements OnInit {
-  private router = inject(Router);
+export class Menu implements OnInit {
+
+ private router = inject(Router);
   private route = inject(ActivatedRoute);
   private plateService = inject(PlateService);
- 
   userName: string = '';
   plates: Plate[] = [];
   loading: boolean = true;
   error: string = '';
-  
+
+
   ngOnInit() {
-   
-    this.route.paramMap.subscribe(params => {
-      const name = params.get('name');
-      if (name) {
-        this.userName = name;
-      }
-    });
-    
     this.loadPlates();
   }
-  
-  loadPlates() {
+
+
+   loadPlates() {
     this.loading = true;
     this.plateService.getAllPlates().subscribe({
       next: (data) => {
@@ -48,9 +41,5 @@ export class Command implements OnInit {
         this.loading = false;
       }
     });
-  }
-  
-  backToHome() {
-    this.router.navigate(['/client']);
   }
 }

@@ -1,0 +1,131 @@
+.cuisine-header {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.cuisine-header button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cuisine-header button:hover {
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cuisine-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.emoji {
+    font-size: 80px;
+    margin-bottom: 10px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.commands-list {
+    width: 80%;
+    max-width: 800px;
+}
+
+.command-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.command-header {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.command-header h4 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.command-content {
+    margin-bottom: 15px;
+}
+
+.plate-details {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.command-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.prepare-button, .ready-button {
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.prepare-button {
+    background-color: #ffc107;
+    color: #212121;
+}
+
+.ready-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.prepare-button:hover {
+    background-color: #ffb300;
+}
+
+.ready-button:hover {
+    background-color: #388E3C;
+}
+
+.loading-message, .error-message, .no-commands {
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.error-message {
+    background-color: #ffebee;
+    color: #d32f2f;
+}
+
+.error-message button {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.error-message button:hover {
+    background-color: #b71c1c;
+}

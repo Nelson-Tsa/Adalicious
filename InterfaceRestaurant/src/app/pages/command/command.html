@@ -1,8 +1,22 @@
-<h1>Adalicious</h1>
-<h2>Commandez vos plats</h2>
-<p>Bonjour <strong>{{ userName }}</strong>, que souhaitez-vous commander aujourd'hui ?</p>
+<div class="command-container">
+  <div class="command-header">
+    <h1>Adalicious 🥦</h1>
+    <h2>Commandez vos plats</h2>
+    <p>Bonjour <strong>{{ userName }}</strong>, que souhaitez-vous commander aujourd'hui ?</p>
+  </div>
+  
 
-<div class="menu-container">
+  <app-menu/>
+
+  <div class="command-footer">
+    <button mat-button (click)="backToHome()">Retour à l'accueil</button>
+  </div>
+</div>
+
+
+
+
+<!-- <div class="menu-container">
   <p *ngIf="loading">Chargement des plats disponibles...</p>
   
 
@@ -19,6 +33,4 @@
     </div>
   </div>
   <p *ngIf="!loading && !error && plates.length === 0">Aucun plat disponible pour le moment.</p>
-</div>
-
-<button (click)="backToHome()">Retour à l'accueil</button>
+</div> -->
