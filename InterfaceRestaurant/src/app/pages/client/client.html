@@ -1,0 +1,11 @@
+<button (click)="openCuisine()">Interface Cuisine</button>
+
+<h1>Bienvenu sur Adalicious</h1>
+<p>pour commencer, peux-tu me donner ton prénom:</p>
+
+<form (submit)="$event.preventDefault(); openCommand()">
+    <label for="name"></label>
+    <input type="text" id="name" name="name" [(ngModel)]="name">
+    <br>
+    <button type="submit">Valider</button>
+</form>
