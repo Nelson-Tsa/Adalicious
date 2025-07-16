@@ -17,6 +17,6 @@
     }
   ],
   "env": {
-    "BACKEND_URL": "https://la-meublerie-backend.onrender.com"
+    "BACKEND_URL": "https://adalicious.onrender.com"
   }
 }
