@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: la-meublerie-backend
+    env: docker
+    rootDir: Back
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: DATABASE_URL
+        sync: false  # À configurer dans le dashboard Render
+      - key: DATABASE_USERNAME
+        sync: false  # À configurer dans le dashboard Render
+      - key: DATABASE_PASSWORD
+        sync: false  # À configurer dans le dashboard Render
+      - key: PORT
+        value: "10000"

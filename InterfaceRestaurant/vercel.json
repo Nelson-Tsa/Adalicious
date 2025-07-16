@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/angular"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(assets/.+)",
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "env": {
+    "BACKEND_URL": "https://la-meublerie-backend.onrender.com"
+  }
+}
