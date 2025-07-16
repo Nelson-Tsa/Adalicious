@@ -1,11 +1,12 @@
 services:
   - type: web
     name: la-meublerie-backend
-    runtime: java
+    env: docker
     plan: free
-    rootDir: Back
-    buildCommand: mvn clean package -DskipTests
-    startCommand: java -jar target/*.jar
+    region: frankfurt
+    branch: main
+    dockerfilePath: ./Back/Dockerfile
+    dockerContext: ./Back
     envVars:
       - key: DATABASE_URL
         sync: false
