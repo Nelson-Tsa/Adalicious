@@ -1,16 +1,17 @@
 services:
   - type: web
     name: la-meublerie-backend
-    env: java
+    runtime: java
     plan: free
-    buildCommand: cd Back && mvn package -DskipTests
-    startCommand: cd Back && java -jar target/*.jar
+    rootDir: Back
+    buildCommand: mvn clean package -DskipTests
+    startCommand: java -jar target/*.jar
     envVars:
       - key: DATABASE_URL
-        sync: false  # À configurer dans le dashboard Render
+        sync: false
       - key: DATABASE_USERNAME
-        sync: false  # À configurer dans le dashboard Render
+        sync: false
       - key: DATABASE_PASSWORD
-        sync: false  # À configurer dans le dashboard Render
+        sync: false
       - key: PORT
         value: "10000"
