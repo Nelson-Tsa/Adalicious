@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/InterfaceRestaurant/$1" }
+  ],
+  "buildCommand": "cd InterfaceRestaurant && npm install && npm run build",
+  "outputDirectory": "InterfaceRestaurant/dist/InterfaceRestaurant",
+  "framework": "angular"
+}
