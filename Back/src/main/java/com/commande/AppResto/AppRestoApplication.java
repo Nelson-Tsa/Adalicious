@@ -11,7 +11,7 @@ public class AppRestoApplication {
 	public static void main(String[] args) {
 
 		// Charger les variables d'environnement depuis .env
-        Dotenv dotenv = Dotenv.configure().load();
+        Dotenv dotenv = Dotenv.configure().ignoreIfMissing().load();
         dotenv.entries().forEach(entry -> System.setProperty(entry.getKey(), entry.getValue()));
         // lance l'aplicaiton
 		SpringApplication.run(AppRestoApplication.class, args);
