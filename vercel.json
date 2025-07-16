@@ -1,10 +1,7 @@
 {
-  "outputDirectory": "InterfaceRestaurant/dist/InterfaceRestaurant",
+  "framework": "angular",
   "rewrites": [
-    { "source": "/(.*)", "destination": "/$1" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
-  ]
+  "buildCommand": "cd InterfaceRestaurant && npm run vercel-build"
 }
