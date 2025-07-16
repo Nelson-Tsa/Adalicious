@@ -1,7 +1,0 @@
-{
-  "framework": "angular",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ],
-  "buildCommand": "npm run vercel-build"
-}
