@@ -1,0 +1,12 @@
+{
+  "name": "adalicious-root",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cd InterfaceRestaurant && npm install && npm run build",
+    "vercel-build": "cd InterfaceRestaurant && npm install && npm run build"
+  },
+  "workspaces": [
+    "InterfaceRestaurant"
+  ]
+}
