@@ -4,7 +4,7 @@ services:
     env: docker
     rootDir: Back
     plan: free
-    dockerfilePath: ./Dockerfile
+    dockerfilePath: Dockerfile
     envVars:
       - key: DATABASE_URL
         sync: false  # À configurer dans le dashboard Render
