@@ -1,5 +1,4 @@
 {
-  "buildCommand": "npm --prefix InterfaceRestaurant install && npm --prefix InterfaceRestaurant run build",
-  "outputDirectory": "InterfaceRestaurant/dist/InterfaceRestaurant",
+  "rootDirectory": "InterfaceRestaurant",
   "framework": "angular"
 }
