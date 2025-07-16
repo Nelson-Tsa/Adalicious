@@ -1,9 +1,10 @@
 services:
   - type: web
     name: la-meublerie-backend
-    env: docker
+    env: java
     plan: free
-    dockerfilePath: ./Back/Dockerfile
+    buildCommand: cd Back && mvn package -DskipTests
+    startCommand: cd Back && java -jar target/*.jar
     envVars:
       - key: DATABASE_URL
         sync: false  # À configurer dans le dashboard Render
