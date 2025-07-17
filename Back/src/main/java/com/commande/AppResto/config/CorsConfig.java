@@ -10,7 +10,7 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**") // toutes les routes
-                .allowedOrigins("http://localhost:3000", "http://localhost:4200", "https://adalicious-six.vercel.app/client") // frontend autorisé (Angular, Vite, etc.)
+                .allowedOrigins("http://localhost:3000", "http://localhost:4200", "https://adalicious-six.vercel.app") // frontend autorisé (Angular, Vite, etc.)
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
                 .allowCredentials(true);
