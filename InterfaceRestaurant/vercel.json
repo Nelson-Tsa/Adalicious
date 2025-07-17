@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "adalicious-frontend",
+  "buildCommand": "ng build",
+  "outputDirectory": "dist/InterfaceRestaurant",
+  "framework": "angular",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
