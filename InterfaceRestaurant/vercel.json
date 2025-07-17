@@ -1,13 +1,19 @@
 {
   "version": 2,
   "name": "adalicious-frontend",
-  "buildCommand": "ng build",
-  "outputDirectory": "dist/InterfaceRestaurant",
+  "buildCommand": "ng build --configuration=production",
+  "outputDirectory": "dist/InterfaceRestaurant/browser",
   "framework": "angular",
-  "rewrites": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$)",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
