@@ -25,13 +25,13 @@
     <div *ngFor="let command of commands" class="command-card">
       <div class="command-header">
         <h4>Commande #{{ command.id }}</h4>
-        <p><strong>Client:</strong> {{ command.user?.name }}</p>
+        <p><strong>Client:</strong> {{ command.user.name }}</p>
       </div>
       
       <div class="command-content">
-        <p><strong>Plat commandé:</strong> {{ command.plate?.name }}</p>
+        <p><strong>Plat commandé:</strong> {{ command.plate.name }}</p>
         <div class="plate-details">
-          <p>{{ command.plate?.description }}</p>
+          <p>{{ command.plate.description }}</p>
         </div>
       </div>
       
