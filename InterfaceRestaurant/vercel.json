@@ -4,6 +4,9 @@
   "buildCommand": "ng build --configuration=production",
   "outputDirectory": "dist/InterfaceRestaurant/browser",
   "framework": "angular",
+  "env": {
+    "NODE_ENV": "production"
+  },
   "routes": [
     {
       "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$)",
