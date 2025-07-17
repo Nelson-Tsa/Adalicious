@@ -1,7 +1,7 @@
 {
   "version": 2,
   "name": "adalicious-frontend",
-  "buildCommand": "ng build --configuration=production",
+  "buildCommand": "NODE_ENV=production ng build --configuration=production --optimization=true",
   "outputDirectory": "dist/InterfaceRestaurant/browser",
   "framework": "angular",
   "env": {
