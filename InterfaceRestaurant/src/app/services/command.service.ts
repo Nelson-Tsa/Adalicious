@@ -2,13 +2,14 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable, catchError, tap, throwError } from 'rxjs';
 import { Command } from '../models/command.model';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CommandService {
   private http = inject(HttpClient);
-  private apiUrl = 'http://localhost:8080';
+  private apiUrl = environment.apiUrl;
 
   getAllCommands(): Observable<Command[]> {
     console.log(`Appel API: ${this.apiUrl}/command/all`);

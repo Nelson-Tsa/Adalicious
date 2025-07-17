@@ -2,13 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Plate } from '../models/plate.model';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PlateService {
   private http = inject(HttpClient);
-  private apiUrl = 'http://localhost:8080';
+  private apiUrl = environment.apiUrl;
 
   getAllPlates(): Observable<Plate[]> {
     return this.http.get<Plate[]>(`${this.apiUrl}/plate/all`);
